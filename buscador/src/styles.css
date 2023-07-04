@@ -6,3 +6,8 @@
     flex-direction: column;
     background: linear-gradient(#121212,#b92f5b);
 }
+
+.title{
+    font-size: 85px;
+    color: bisque;
+}
