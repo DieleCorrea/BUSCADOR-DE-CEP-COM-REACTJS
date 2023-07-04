@@ -66,5 +66,20 @@
     margin: 16px;
     font-size: 39px;
  }
-
-
+.main span{
+    margin-bottom: 16px ;
+    font-weight: bold;
+}
+/*Chamei esse @media pois quando diminuir a página o tamanho das div diminuir junto e não ficando desalinhado*/
+@media(max-width: 620px){
+    .title{
+        font-size: 60px;
+    }
+    .main h2{
+        font-size: 28px;
+    }
+    .main{
+        width: 80%;/*Quanndo diminui a tela o main fica 80% pequeno*/
+        min-height: 250px;
+    }
+}
