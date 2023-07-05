@@ -79,7 +79,7 @@
         font-size: 28px;
     }
     .main{
-        width: 80%;/*Quanndo diminui a tela o main fica 80% pequeno*/
+        width: 80%;/*Quando diminui a tela o main fica 80% pequeno*/
         min-height: 250px;
     }
 }
