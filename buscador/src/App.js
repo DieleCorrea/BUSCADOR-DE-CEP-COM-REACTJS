@@ -5,9 +5,15 @@ import './styles.css';
 
 function App() {
 
+
   const[ input, setImput] = useState('')
   /* Input é o nome do estado e o setImput é o nome da função que temos  para trocar  valor o estado.
   Quando eu chamar o Input apenas, eu to querendo apenas saber  nome do estado. Quandoo chamo o setImput é para eu PASSAR UM VALOR NOVO PARA ESSE ESTADO */
+ 
+  function handleSearch(){
+    alert('VALOR DO INPUT ' + input)
+  }  
+
   return (
     <div className="container">
       <h1 className="title">Buscador de cep</h1>
@@ -22,7 +28,7 @@ function App() {
           /*recebbemos uma função anonima que chamei de "e" e passamos para  set input onde recebemos o evento e temos acesso ao valor dgitado através do "e.target.value" */
 
           />
-        <button className="buttonSearch">
+        <button className="buttonSearch" onClick={handleSearch}>
         <FiSearch 
           size={25}
           color="#FFF" />
