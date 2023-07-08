@@ -15,6 +15,12 @@ function App() {
       alert('Preencha algum cep')
     }
     
+    /*try: o que queremos fazer e pode dar errado, e caso der errado cai no bloco catch, para capturar e dar o alerta  */
+     try{
+
+     }catch{
+
+     }
   }  
 
   return (
