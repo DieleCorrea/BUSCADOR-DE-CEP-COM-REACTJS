@@ -11,7 +11,10 @@ function App() {
   Quando eu chamar o Input apenas, eu to querendo apenas saber  nome do estado. Quandoo chamo o setImput é para eu PASSAR UM VALOR NOVO PARA ESSE ESTADO */
  
   function handleSearch(){
-    alert('VALOR DO INPUT ' + input)
+    if(input === ''){
+      alert('Preecha algum cep')
+    }
+    
   }  
 
   return (
