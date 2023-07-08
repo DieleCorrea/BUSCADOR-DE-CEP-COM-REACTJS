@@ -19,10 +19,11 @@ function App() {
 
     /*try: o que queremos fazer e pode dar errado, e caso der errado cai no bloco catch, para capturar e dar o alerta  */
      try{
-        const response = await api.get(`${input}/json`)
-        console.log(response)
+        const response = await api.get(`${input}/json`);
+        console.log(response.data)
      }catch{
-        alert("ops erro ao buscar")
+        alert("ops erro ao buscar");
+        setImput("") /*depois do alerta ele volta ao valor do usestate do input para vazio */
      }
   }  
 
@@ -48,7 +49,7 @@ function App() {
       </div>
 
       <main className='main'>
-        <h2>CEP: 93145593</h2>
+        <h2>CEP: 93145584</h2>
 
         <span>Rua teste</span>
         <span>Complemento: Algum complemento</span>
