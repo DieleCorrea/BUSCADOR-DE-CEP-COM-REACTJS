@@ -3,6 +3,8 @@ import { useState } from 'react';
 import { FiSearch} from 'react-icons/fi'
 import './styles.css';
 
+import api from './sevices/api';
+
 function App() {
 
 
@@ -14,12 +16,13 @@ function App() {
     if(input === ''){
       alert('Preencha algum cep')
     }
-    
+
     /*try: o que queremos fazer e pode dar errado, e caso der errado cai no bloco catch, para capturar e dar o alerta  */
      try{
-
+        const response = await api.get(`${input}/json`)
+        console.log(response)
      }catch{
-
+        alert("ops erro ao buscar")
      }
   }  
 
