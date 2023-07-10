@@ -51,12 +51,12 @@ function App() {
       </div>
 
       <main className='main'>
-        <h2>CEP: 93145584</h2>
+          <h2>CEP: {cep.cep}</h2>
 
-        <span>Rua teste</span>
-        <span>Complemento: Algum complemento</span>
-        <span>Vila Rosa</span>
-        <span>Campo Grande-MS</span>
+        <span>{cep.logradouro}</span>
+        <span>Complemento: {cep.complemento}</span>
+        <span>{cep.bairro}</span>
+        <span>{cep.localidade} - {cep.uf}</span>
       </main>
 
     </div>
