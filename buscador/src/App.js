@@ -11,6 +11,7 @@ function App() {
   const[ input, setImput] = useState('')
   /* Input é o nome do estado e o setImput é o nome da função que temos  para trocar  valor o estado.
   Quando eu chamar o Input apenas, eu to querendo apenas saber  nome do estado. Quandoo chamo o setImput é para eu PASSAR UM VALOR NOVO PARA ESSE ESTADO */
+  const[ cep, setCep] = useState({})
  
   async function handleSearch(){
     if(input === ''){
@@ -20,7 +21,8 @@ function App() {
     /*try: o que queremos fazer e pode dar errado, e caso der errado cai no bloco catch, para capturar e dar o alerta  */
      try{
         const response = await api.get(`${input}/json`);
-        console.log(response.data)
+        setCep(response.data)
+        setImput("");
      }catch{
         alert("ops erro ao buscar");
         setImput("") /*depois do alerta ele volta ao valor do usestate do input para vazio */
